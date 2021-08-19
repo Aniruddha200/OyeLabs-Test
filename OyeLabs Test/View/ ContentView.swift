@@ -99,6 +99,7 @@ struct ContentView: View {
 							  validate = passwordValidator(text)
 						  }
 			  })
+				.autocapitalization(.none)
 				.underlineTextFieldStyle()
 			}
 			else{
@@ -111,6 +112,7 @@ struct ContentView: View {
 								validate = passwordValidator(text)
 							}
 				})
+					.autocapitalization(.none)
 					.underlineTextFieldStyle()
 			}
 		}
