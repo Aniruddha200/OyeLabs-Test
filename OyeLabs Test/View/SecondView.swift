@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// Shops View
+
 struct SecondView: View {
 	
 	@State private var isSheetShow = false
@@ -18,6 +20,7 @@ struct SecondView: View {
 		tileModel(title: "Electronics Shop", image: "electronic"),
 		tileModel(title: "Jewelry Shop", image: "jewelry")
 	]
+	
 	var body: some View {
 		VStack{
 			ScrollView{
@@ -25,17 +28,7 @@ struct SecondView: View {
 				ForEach(tileCollection){tile in
 					rectTile(tileTitle: tile.title, tileImage: tile.image)
 				}
-//				VStack{
-//					rectTile(tileTitle: tileCollection[0].title, tileImage: tileCollection[0].image)
 //
-//				HStack{
-//					squareTile(tileTitle: tileCollection[1].title, tileImage: tileCollection[1].image)
-//					squareTile(tileTitle: tileCollection[2].title, tileImage: tileCollection[2].image)
-//				}
-//				}
-//				ForEach(tileCollection){tile in
-//					rectTile(tileTitle: tile.title, tileImage: tile.image)
-//				}
 			}
 		}
 		
@@ -49,32 +42,39 @@ struct SecondView: View {
 		)
 	}
 	
+// Tile Model, it can be moved model group as a new file
+	
 	struct tileModel: Identifiable {
 		let id = UUID()
 		let title: String
 		let image: String
 	}
+
+// Square Tile View,it can be moved to view group as a new file
+// I commented out because, haven't used it.
+//	struct squareTile: View {
+//		@State var tileTitle: String
+//		var tileImage: String
+//		var body: some View{
+//			ZStack{
+//				Image(tileImage)
+//					.resizable()
+//					.frame(width: 170, height: 150, alignment: .center)
+//					.scaledToFit()
+//					.clipShape(RoundedRectangle(cornerRadius: 10))
+//				Text(tileTitle)
+//					.font(.subheadline)
+//					.fontWeight(.bold)
+//					.foregroundColor(.white	)
+//					.background(Color.black
+//									.opacity(0.16))
+//			}
+//			.onTapGesture(perform: {self.tileTitle = ""})
+//		}
+//	}
 	
-	struct squareTile: View {
-		@State var tileTitle: String
-		var tileImage: String
-		var body: some View{
-			ZStack{
-				Image(tileImage)
-					.resizable()
-					.frame(width: 170, height: 150, alignment: .center)
-					.scaledToFit()
-					.clipShape(RoundedRectangle(cornerRadius: 10))
-				Text(tileTitle)
-					.font(.subheadline)
-					.fontWeight(.bold)
-					.foregroundColor(.white	)
-					.background(Color.black
-									.opacity(0.16))
-			}
-			.onTapGesture(perform: {self.tileTitle = ""})
-		}
-	}
+	
+// Rectangle Tile View, it can be moved to view group as a new file
 	
 	struct rectTile: View {
 		@State var tileTitle: String
@@ -96,14 +96,15 @@ struct SecondView: View {
 			.onTapGesture(perform: {self.tileTitle = ""})
 		}
 	}
-	
+
+// Add New Tile View
 	struct ThirdView: View {
 		@Environment(\.presentationMode) var pm
 		@Binding var tileCollections: [tileModel]
 		@State private var name = ""
 		@State private var title = ""
 		@State private var image = ""
-		let images = ["supermarket", "mechanic", "electronic", "jewelry"]
+		let images = ["pharmacy", "comic", "vegetable", "butcher"]
 		
 		var body: some View {
 			
@@ -147,11 +148,5 @@ struct SecondView: View {
 				.navigationBarTitle("Add Shop", displayMode: .inline)
 			}
 		}
-	}
-}
-
-struct SecondView_Previews: PreviewProvider {
-	static var previews: some View {
-		SecondView()
 	}
 }

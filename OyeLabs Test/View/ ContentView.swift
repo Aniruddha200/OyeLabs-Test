@@ -8,6 +8,9 @@
 import SwiftUI
 import CoreData
 
+
+//Login View
+
 struct ContentView: View {
 	@Environment(\.managedObjectContext) private var viewContext
 	@State private var email = ""
@@ -82,6 +85,8 @@ struct ContentView: View {
 		}
 	}
 	
+// Custom Underling TextFiled
+	
 	struct CustomTextFiled: View{
 		var placeholder: String
 		@Binding var text: String
@@ -117,12 +122,16 @@ struct ContentView: View {
 			}
 		}
 		
+//The following method checks the validity of the email(ie: example@abc.domain format) and returns a boolean
+		
 		func emailValidator(_ inputEmail: String) -> Bool{
 			let validPatten = #"^\S+@\S+\.\S+$"#
 			let result = inputEmail.range(of: validPatten, options: .regularExpression)
 			
 			return (result != nil)
 		}
+		
+//The following method checks the validity of the password (ie: min 8 characters) and returns a boolean
 		
 		func passwordValidator(_ inputPassword: String) -> Bool{
 			if inputPassword.count >= 8{
@@ -131,6 +140,8 @@ struct ContentView: View {
 			return false
 		}
 	}
+	
+// Custom Image of the eye button
 	
 	struct CustomEyeImage: View {
 		var imageName: String
@@ -145,7 +156,7 @@ struct ContentView: View {
 
 }
 
-
+//Custom Viewmodifer for textFiledViewStyle
 extension View {
 	func underlineTextFieldStyle() -> some View {
 		self
@@ -155,10 +166,3 @@ extension View {
 	}
 }
 
-
-
-struct ContentView_Previews: PreviewProvider {
-	static var previews: some View {
-		ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-	}
-}

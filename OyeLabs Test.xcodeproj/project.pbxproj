@@ -11,8 +11,6 @@
 		C396E90426CE46A5009FB3B8 /*  ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396E90326CE46A5009FB3B8 /*  ContentView.swift */; };
 		C396E90626CE46AA009FB3B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C396E90526CE46AA009FB3B8 /* Assets.xcassets */; };
 		C396E90926CE46AA009FB3B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C396E90826CE46AA009FB3B8 /* Preview Assets.xcassets */; };
-		C396E90B26CE46AA009FB3B8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396E90A26CE46AA009FB3B8 /* Persistence.swift */; };
-		C396E90E26CE46AA009FB3B8 /* OyeLabs_Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C396E90C26CE46AA009FB3B8 /* OyeLabs_Test.xcdatamodeld */; };
 		C396E91626CE537D009FB3B8 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396E91526CE537D009FB3B8 /* SecondView.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,8 +20,6 @@
 		C396E90326CE46A5009FB3B8 /*  ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ContentView.swift"; sourceTree = "<group>"; };
 		C396E90526CE46AA009FB3B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C396E90826CE46AA009FB3B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C396E90A26CE46AA009FB3B8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		C396E90D26CE46AA009FB3B8 /* OyeLabs_Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OyeLabs_Test.xcdatamodel; sourceTree = "<group>"; };
 		C396E90F26CE46AA009FB3B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C396E91526CE537D009FB3B8 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,9 +59,7 @@
 				C396E91726CEBDA1009FB3B8 /* Model */,
 				C396E90126CE46A5009FB3B8 /* OyeLabs_TestApp.swift */,
 				C396E90526CE46AA009FB3B8 /* Assets.xcassets */,
-				C396E90A26CE46AA009FB3B8 /* Persistence.swift */,
 				C396E90F26CE46AA009FB3B8 /* Info.plist */,
-				C396E90C26CE46AA009FB3B8 /* OyeLabs_Test.xcdatamodeld */,
 				C396E90726CE46AA009FB3B8 /* Preview Content */,
 			);
 			path = "OyeLabs Test";
@@ -171,11 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C396E90B26CE46AA009FB3B8 /* Persistence.swift in Sources */,
 				C396E91626CE537D009FB3B8 /* SecondView.swift in Sources */,
 				C396E90426CE46A5009FB3B8 /*  ContentView.swift in Sources */,
 				C396E90226CE46A5009FB3B8 /* OyeLabs_TestApp.swift in Sources */,
-				C396E90E26CE46AA009FB3B8 /* OyeLabs_Test.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,19 +356,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C396E90C26CE46AA009FB3B8 /* OyeLabs_Test.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C396E90D26CE46AA009FB3B8 /* OyeLabs_Test.xcdatamodel */,
-			);
-			currentVersion = C396E90D26CE46AA009FB3B8 /* OyeLabs_Test.xcdatamodel */;
-			path = OyeLabs_Test.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = C396E8F626CE46A5009FB3B8 /* Project object */;
 }
